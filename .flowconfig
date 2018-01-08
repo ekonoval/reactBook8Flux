@@ -1,7 +1,8 @@
 [ignore]
 ;.*/react/node_modules/.*
 ;.*/fbemitter/node_modules/.*
-./node_modules/.*
+;.*/node_modules/.*
+.*/node_modules/immutable/dist/immutable.js.flow
 
 [include]
 node_modules/classnames
