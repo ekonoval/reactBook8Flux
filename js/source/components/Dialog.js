@@ -8,8 +8,8 @@ type Props = {
   confirmLabel: string,
   modal: boolean,
   onAction: Function,
-  hasCancel: ?boolean,
-  children?: Array<any>,
+  hasCancel?: ?boolean,
+  children?: any,
 };
 
 class Dialog extends Component<Props> {

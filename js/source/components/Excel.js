@@ -30,7 +30,7 @@ type State = {
   dialog: ?DialogState,
 };
 
-class Excel extends Component {
+class Excel extends Component<{}, State> {
   state: State;
   schema: Array<Object>;
   constructor() {
