@@ -9,10 +9,10 @@ import type {FormInputField, FormInputFieldValue} from './FormInput';
 
 type Props = {
   readonly?: boolean,
-  recordId: ?number,
+  recordId?: number,
 };
 
-class Form extends Component {
+class Form extends Component<Props> {
   
   fields: Array<Object>;
   initialData: ?Object;
@@ -20,7 +20,7 @@ class Form extends Component {
   constructor(props: Props) {
     super(props);
     this.fields = CRUDStore.getSchema();
-    if ('recordId' in this.props) {
+    if ('recordId' in this.props && this.props.recordId !== undefined) {
       this.initialData = CRUDStore.getRecord(this.props.recordId);
     }
   }
