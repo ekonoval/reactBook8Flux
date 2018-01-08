@@ -12,24 +12,28 @@ type Props = {
   children?: Array<any>,
 };
 
-class Dialog extends Component {
+class Dialog extends Component<Props> {
 
   props: Props;
-  
+
   static defaultProps = {
     confirmLabel: 'ok',
     modal: false,
-    onAction: (_) => {},
+    onAction: () => {},
     hasCancel: true,
   };
   
   componentWillUnmount() {
-    document.body.classList.remove('DialogModalOpen');
+    if (document.body) {
+      document.body.classList.remove('DialogModalOpen');
+    }
   }
   
   componentDidMount() {
     if (this.props.modal) {
-      document.body.classList.add('DialogModalOpen');
+      if (document.body) {
+        document.body.classList.add('DialogModalOpen');
+      }
     }
   }
   
@@ -48,8 +52,7 @@ class Dialog extends Component {
                 </span>
               : null
             }
-            <Button onClick={this.props.onAction.bind(this, 
-                this.props.hasCancel ? 'confirm' : 'dismiss')}>
+            <Button onClick={this.props.onAction.bind(this, this.props.hasCancel ? 'confirm' : 'dismiss')}>
               {this.props.confirmLabel}
             </Button>
           </div>

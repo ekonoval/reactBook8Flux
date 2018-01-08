@@ -18,5 +18,5 @@ ReactDOM.render(
     </div>
     <Whinepad />
   </div>,
-  document.getElementById('pad')
+  (document.getElementById('pad'): any)
 );

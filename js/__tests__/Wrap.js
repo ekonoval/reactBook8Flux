@@ -1,8 +1,15 @@
-/* @flow */
+/**
+ * @flow
+ * @see https://flow.org/en/docs/react/children/
+ */
 
-import React from 'react';
+import * as React from 'react';
 
-class Wrap extends React.Component {
+type Props = {
+  children?: React.Node
+};
+
+class Wrap extends React.Component<Props> {
   render() {
     return <div>{this.props.children}</div>;
   }
