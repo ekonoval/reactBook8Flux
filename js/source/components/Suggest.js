@@ -12,7 +12,7 @@ type State = {
   value: string,
 };
 
-class Suggest extends Component {
+class Suggest extends Component<Props, State> {
   
   props: Props;
   state: State;

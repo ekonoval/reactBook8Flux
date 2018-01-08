@@ -98,6 +98,6 @@ ReactDOM.render(
     {/* more components go here... */}
 
   </div>,
-  document.getElementById('pad')
+  (document.getElementById('pad'): any)
 );
 

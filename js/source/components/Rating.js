@@ -14,7 +14,7 @@ type State = {
   tmpRating: number,
 };
 
-class Rating extends Component {
+class Rating extends Component<Props, State> {
   
   props: Props;
   state: State;

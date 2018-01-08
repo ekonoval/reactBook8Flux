@@ -13,7 +13,7 @@ type State = {
   count: number,
 };
 
-class Whinepad extends Component {
+class Whinepad extends Component<{}, State> {
   
   state: State;
   
