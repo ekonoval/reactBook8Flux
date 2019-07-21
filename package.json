@@ -23,8 +23,11 @@
       "node_modules/fbjs"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "browserify": "^16.3.0"
+  },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-jest": "^22.0.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -37,6 +40,7 @@
     "invariant": "^2.2.2",
     "react": "^15.0.2",
     "react-addons-test-utils": "^15.0.2",
-    "react-dom": "^15.0.2"
+    "react-dom": "^15.0.2",
+    "watch": "^1.0.2"
   }
 }
